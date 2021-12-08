@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../Styles/home.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="..\Styles\categories.css" rel="stylesheet">
+
+    <title> Categories </title>
+</head>
+
+<body>
+
+    <!-- Start Header -->
+    <header id="header">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+
+            <h1 class="logo me-auto me-lg-0"><a href="index.html">Artex</a></h1>
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="active" href="Home.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./categories.html"
+                            role="button" aria-expanded="false">Categories</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item btnLiv" href="#">Living room</a></li>
+                            <li><a class="dropdown-item btnDin" href="#">Dining room</a></li>
+                            <li><a class="dropdown-item btnBed" href="#">Bedroom</a></li>
+                            <li><a class="dropdown-item btnKit" href="#">Kitchens</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./contact.html">Conatct</a></li>
+                    <li><a href="Sign up.html">Sign</a></li>
+                </ul>
+
+            </nav>
+            <!-- .navbar -->
+
+            <div class="header-social-links d-none d-lg-block">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Slider -->
+    <div id="slider" class="carousel slide container">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#slider" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#slider" data-bs-slide-to="2"></button>
+        </div>
+
+
+        <!-- Start Body -->
+        <div class="container">
+
+            <!-- Category 1 -->
+            <div class="row d-flex flex-row border categoryCard btnLiv " style="margin: 30px;">
+                <div class=" col-sm-5 m-10   ">
+                    <img class=" m-10 rounded my-2" src="../Source/living-room-.jpg"
+                        style="width: 400px;height: 300px;">
+                </div>
+                <div class=" col-sm-6 p-20 align-items-end  ">
+                    <h1 class=" m-5 "> Living Room</h1>
+                    <p class="ms-5"> All your Living Room needs are here.<br> make your Living Room special and
+                        attractive and charming</p>
+                    <br>
+
+                    <button  class=" btnLiv btn ms-5 " style="background-color: #34b7a7;"> Explore Now
+                        &#187;</button>
+                </div>
+            </div>
+
+
+            <!-- Category 2 -->
+            <div class="row d-flex flex-row border categoryCard btnBed" style="margin: 30px;">
+
+                <div class=" col-sm-6 p-20 align-items-end  ">
+                    <h1 class=" m-5 "> Bedroom </h1>
+                    <p class="ms-5"> All your Bedroom needs are here.<br> make your Bedroom comfort for your eyes and
+                        body</p>
+                    <br>
+
+                    <button  class=" btnBed btn  ms-5 " style="background-color: #34b7a7;"> Explore Now
+                        &#187;</button>
+                </div>
+                <div class=" col-sm-5 m-10   ">
+                    <img class=" m-10 rounded my-2" src="../Source/bedroom.jpg" style="width: 400px;height: 300px;">
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="row d-flex flex-row border categoryCard btnDin" style="margin: 30px;">
+                <div class=" col-sm-5 m-10   ">
+                    <img class=" m-10 rounded my-2" src="../Source/dinning room.jpeg"
+                        style="width: 400px;height: 300px;">
+                </div>
+                <div class=" col-sm-6 p-20 align-items-end  ">
+                    <h1 class=" m-5 "> Dinning Room</h1>
+                    <p class="ms-5"> All your Dinning Room needs are here.<br> make your Dinning Room warm and fabulous
+                    </p>
+                    <br>
+
+                    <button  class="btnDin btn ms-5" style="background-color: #34b7a7;"> Explore Now
+                        &#187;</button>
+                </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="row d-flex flex-row border categoryCard btnKit" style="margin: 30px;">
+
+                <div class=" col-sm-6 p-20 align-items-end  ">
+                    <h1 class=" m-5 "> Kitchen </h1>
+                    <p class="ms-5"> All your kitchen needs are here.<br> make your kitchen ready for the best meal</p>
+                    <br>
+
+                    <button  class="btnKit btn ms-5" style="background-color: #34b7a7;"> Explore Now
+                        &#187;</button>
+                </div>
+                <div class=" col-sm-5 m-10 ">
+                    <img class="  rounded my-2" src="../Source/kitchen.png" style="width: 400px;height: 300px;">
+                </div>
+            </div>
+
+
+
+
+            <!-- hover way  -->
+            <!-- <div class="row">
+                <ul class="nav nav-tabs d-flex justify-content-between">
+                    <li class="nav-item col-sm-2">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#home">tab1 </a>
+                    </li>
+                    <li class="nav-item col-sm-2">
+                        <a class="nav-link" data-bs-toggle="tab" href="#menu1">tab2</a>
+                    </li>
+                    <li class="nav-item col-sm-2">
+                        <a class="nav-link" data-bs-toggle="tab" href="#menu2">tab3</a>
+                    </li>
+                    <li class="nav-item col-sm-2">
+                        <a class="nav-link" data-bs-toggle="tab" href="#menu3">tab4</a>
+                    </li>
+                </ul> -->
+
+            <!-- Tab panes -->
+            <!-- <div class="tab-content">
+                    <div class="tab-pane container active" id="home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dolore a perferendis repellendus ipsa voluptas! Molestiae ipsa, eaque tempora blanditiis neque facilis, esse placeat delectus aut eius et. Deleniti, error!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam delectus provident eos odio asperiores fugit consequuntur et accusamus! Veritatis tempore quasi eum earum porro iusto ipsa laborum numquam similique molestiae. </div>
+                    <div class="tab-pane container fade" id="menu1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptate voluptatum numquam recusandae eius provident laborum aliquid illum similique, unde qui obcaecati eum tenetur, voluptates minus error sint accusamus blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero doloribus maxime molestias quae asperiores a illum excepturi, voluptatum perspiciatis recusandae. Illo et eveniet nam earum veniam vel unde, ut reprehenderit?</div>
+                    <div class="tab-pane container fade" id="menu2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aliquid inventore accusantium aut. Provident odio, dolores, delectus nobis earum laborum non voluptatum eius maxime, laboriosam officia quisquam accusantium neque sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nam, repudiandae saepe odit accusantium vel culpa impedit temporibus dolores, soluta sint explicabo suscipit modi facere est exercitationem corporis? Dolorum, sed!</div>
+                    <div class="tab-pane container fade" id="menu3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perspiciatis quae officia fugit hic omnis qui fugiat explicabo cupiditate? Ullam maiores veniam aliquid quo doloribus consectetur cumque explicabo modi similique. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non vitae sed quod rem aut asperiores ipsa fuga, iure hic ipsum nostrum ullam distinctio velit ex voluptatibus vel impedit ea rerum..</div>
+                </div> -->
+        </div>
+
+    </div>
+    </div>
+    </div>
+    <!-- End Body -->
+
+
+
+    <!-- Start footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="box">
+                <h3>MATRIX</h3>
+                <ul class="social">
+                    <li>
+                        <a href="#" class="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi enim ad ipsa, consequatur
+                    dignissimos, debitis at nam perspiciatis dolorum, veniam natus maiores animi a minus est dolor
+                    quaerat modi reiciendis.
+                </p>
+            </div>
+            <div class="box">
+                <ul class="links">
+                    <li><i class="fas fa-angle-double-right"></i><a href="#">Important Link 1</a></li>
+                    <li><i class="fas fa-angle-double-right"></i><a href="#">Important Link 2</a></li>
+                    <li><i class="fas fa-angle-double-right"></i><a href="#">Important Link 3</a></li>
+                    <li><i class="fas fa-angle-double-right"></i><a href="#">Important Link 4</a></li>
+                    <li><i class="fas fa-angle-double-right"></i><a href="#">Important Link 5</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <div class="line">
+                    <i class="fas fa-map-marker-alt fa-fw"></i>
+                    <div class="info">New Sohag University, Sohag Center, Sohag</div>
+                </div>
+                <div class="line">
+                    <i class="far fa-clock fa-fw"></i>
+                    <div class="info">Business Hours: From 10:00 To 19:00</div>
+                </div>
+                <div class="line">
+                    <i class="fas fa-phone-volume fa-fw"></i>
+                    <div class="info">
+                        <span>+20235355644</span>
+                        <span>+20198765432</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box footer-gallery">
+                <img src="../Source/dinning room.jpeg" alt="">
+                <img src="../Source/kitchen.png" alt="">
+                <img src="../Source/living-room-.jpg" alt="">
+                <img src="../Source/bedroom.jpg" alt="">
+                <img src="../Source/slider1.jpg" alt="">
+                <img src="../Source/slider2.jpg" alt="">
+            </div>
+        </div>
+        <p class="copyright">
+            &copy; 2021 <span>Artex</span> All Right Reserved
+        </p>
+    </div>
+    <!-- End footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/categories.js"></script>
+</body>
+
+</html>

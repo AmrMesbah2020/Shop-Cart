@@ -1,3 +1,37 @@
 *{
-margin :3px
+    box-sizing: border-box;
+}
+
+.productCard:hover {
+
+    transform: translateY(-5px);
+    box-shadow: 5px 10px #969b9a;
+}
+
+.categoryCard:hover {
+
+    transform: translateY(-5px);
+    box-shadow: 5px 10px #34b7a7;
+}
+
+.catName {
+
+    width: 100px;
+    height: 5px;
+    background-color: #34b7a7;
+    color: #34b7a7;
+    justify-content: start;
+    visibility: visible;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.productName , .productPrice {
+    font-weight: bolder;
+    color: black;
+    
+}
+
+.rounded{
+    height: 350px;
+    width: 400px;
 }
