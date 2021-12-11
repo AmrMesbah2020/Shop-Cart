@@ -1,60 +1,79 @@
-// Redirecting user to selected category : 
-
-var btnLiv = document.getElementsByClassName("btnLiv");
-var btnKit = document.getElementsByClassName("btnKit");
-var btnBed = document.getElementsByClassName("btnBed");
-var btnDin = document.getElementsByClassName("btnDin");
-
-for (let i = 0; i < btnLiv.length; i++) {
-    btnLiv[i].addEventListener('click', function () {
-        location.href = "./productsLiv.html";
-    }); 
+let filterList = document.querySelectorAll(".filter li");
+filterList.forEach(li => {
+    li.addEventListener('click', removeActive);
+});
+function removeActive() {
+    filterList.forEach(li => {
+        li.classList.remove('active');
+        this.classList.add('active');
+    });
 }
-
-for (let i = 0; i < btnKit.length; i++) {
-    btnKit[i].addEventListener('click', function () {
-        location.href = "./productsKit.html";
-    }); 
+//variables
+let products = document.querySelectorAll(".categories .border-dark");
+let liKitchens = document.getElementById('Kitchens');
+let liLivingRoom = document.getElementById("LivingRoom");
+let liDinningRoom = document.getElementById("DinningRoom");
+let liBedRoom = document.getElementById("BedRoom");
+let cardlivingroom = document.querySelectorAll(".categories .LivingRoom");
+let cardKitchens = document.querySelectorAll(".categories .Kitchens");
+let cardDinningRoom = document.querySelectorAll(".categories .DinningRoom");
+let cardBedRoom = document.querySelectorAll(".categories .BedRoom");
+let cath1 = document.getElementById("headercat");
+//add event listener
+liKitchens.addEventListener('click', kitchencat);
+liLivingRoom.addEventListener('click', livingcat);
+liDinningRoom.addEventListener('click', dinningcat);
+liBedRoom.addEventListener('click', bedroomcat);
+//function
+function livingcat() {
+    products.forEach(card => {
+        card.style = 'display:none';
+        cardlivingroom.forEach(livingroom => {
+            livingroom.style = 'display:block'
+        })
+    });
+    cath1.innerHTML = "Living Room"
+    filterList.forEach(li => {
+        li.classList.remove('active');
+        liLivingRoom.classList.add('active');
+    });
 }
-
-for (let i = 0; i < btnBed.length; i++) {
-    btnBed[i].addEventListener('click', function () {
-        location.href = "./productsBed.html";
-    }); 
+function kitchencat() {
+    products.forEach(card => {
+        card.style = 'display:none';
+        cardKitchens.forEach(Kitchens => {
+            Kitchens.style = 'display:block'
+        })
+    });
+    cath1.innerHTML = "Kitchens"
+    filterList.forEach(li => {
+        li.classList.remove('active');
+        liKitchens.classList.add('active');
+    });
 }
-
-
-for (let i = 0; i < btnDin.length; i++) {
-    btnDin[i].addEventListener('click', function () {
-        location.href = "./productsDin.html";
-    }); 
+function dinningcat() {
+    products.forEach(card => {
+        card.style = 'display:none';
+        cardDinningRoom.forEach(DinningRoom => {
+            DinningRoom.style = 'display:block'
+        })
+    });
+    cath1.innerHTML = "Dinning Room"
+    filterList.forEach(li => {
+        li.classList.remove('active');
+        liDinningRoom.classList.add('active');
+    });
 }
-
-
-//********************************************************************************** */
-//display category products on click the category
-
-// let switcherList = document.querySelectorAll(".switcher li");
-// let products = document.querySelectorAll(".allProducts");
-
-// switcherList.forEach(catCards => {
-//     catCards.addEventListener('click', removeActive);
-//     catCards.addEventListener('click', manageProducts);
-// });
-
-// function removeActive() {
-//     switcherList.forEach(catCards => {
-//         catCards.classList.remove('active');
-//         this.classList.add('active');
-//     });
-// }
-
-
-// function manageProducts() {
-//     products.forEach((productsDiv) => {
-//         productsDiv.style.display = 'none'
-//     });
-//     document.querySelectorAll(this.dataset.cat).forEach((el) => {
-//         el.style.display = "block"
-//     })
-// }
+function bedroomcat() {
+    products.forEach(card => {
+        card.style = 'display:none';
+        cardBedRoom.forEach(BedRoom => {
+            BedRoom.style = 'display:block'
+        })
+    });
+    cath1.innerHTML = "Bed Room"
+    filterList.forEach(li => {
+        li.classList.remove('active');
+        liBedRoom.classList.add('active');
+    });
+}
