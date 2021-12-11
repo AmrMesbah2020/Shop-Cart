@@ -5,7 +5,7 @@
 .productCard:hover {
 
     transform: translateY(-5px);
-    box-shadow: 5px 10px #969b9a;
+    box-shadow: 2px 2px #969b9a, -2px -2px 2px#969b9a ;
 }
 
 .categoryCard:hover {
