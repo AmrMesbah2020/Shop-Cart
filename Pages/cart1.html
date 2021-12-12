@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -23,15 +24,17 @@
                 <ul>
                     <li><a class="active" href="Home.html">Home</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./categories.html" role="button"
-                            aria-expanded="false">Categories</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Living room</a></li>
-                            <li><a class="dropdown-item" href="#">Dining room</a></li>
-                            <li><a class="dropdown-item" href="#">Bedroom</a></li>
-                            <li><a class="dropdown-item" href="#">Kitchens</a></li>
-                        </ul>
-                    </li>
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="./categories.html"
+                      role="button" aria-haspopup="true" aria-expanded="false">
+                      Categories </a>
+                          <ul class="dropdown-menu">
+                              <li><a class="dropdown-item " href="./Kitchens.html">Kitchens</a></li>
+                              <li><a class="dropdown-item " href="./Livingrom.html">Living room</a></li>
+                              <li><a class="dropdown-item " href="./dinn.html">Dining room</a></li>
+                              <li><a class="dropdown-item " href="./bed.html">Bedroom</a></li>
+                          </ul>
+                  </li>
+              
                     <li><a href="./contact.html">Conatct</a></li>
                     <li><a href="Sign up.html">Sign</a></li>
                 </ul>
@@ -133,7 +136,7 @@
       </div>
 
 
-      <div class="row py-5 p-4 rounded shadow-sm favorites_container">
+      <div class="row py-5 p-4 rounded shadow-sm favorites_container" id="fav">
        <h5 class="text-center text-uppercase">Your Favorites</h5>
         
       </div>
@@ -207,6 +210,26 @@
     </p>
 </div>
 <script type="text/javascript" src="../js/cart.js"></script>
+<script src="../js/categories.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#fav div").css({'background':'light',
+  'border':'0.5px solid gray',
+  'margin':'10px',
+  'font-size':'20px',
+  'font-style':'italic',
+  'box-shadow':'10px 10px 30px 5px gray',
+  'display':'flex',
+  'flex':'justify-content',
+  'justify-content':'space-evenly'})
+  // $("#fav div span:eq(1)").css({'float':'right',
+  // 'margin-right':'20px'})
+  $("#fav div img").css({'border-radius':'3px',
+  'width':'100px',
+  'hieght':'100px',
+  'margin':'5px'})
+  })
+</script>
 
 </body>
 </html>
