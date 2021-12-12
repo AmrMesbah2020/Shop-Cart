@@ -77,3 +77,29 @@ function bedroomcat() {
         liBedRoom.classList.add('active');
     });
 }
+
+
+// Amr Mesbah tradmark
+// addtofav function on localstorage
+var names=$(".productName");
+var prices= $(".productPrice");
+var imgsSrc=$(".productCard div img");
+
+var itemList =[];
+
+function obj(name,price,img){
+this.name=name;
+this.price=price; 
+this.img=img;
+}
+for(var i=0;i<24;i++){
+    var item= new obj(names[i].textContent,prices[i].textContent,imgsSrc[i].getAttribute("src"));
+    itemList.push(item)
+}
+
+console.log(itemList)
+var favList=[];
+function addToFav(x){
+    favList.push(itemList[x])
+    localStorage.setItem('products',JSON.stringify(favList));
+}
