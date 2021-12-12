@@ -36,3 +36,30 @@ function updateCartTotal(){
 	}
 	document.getElementsByClassName('cart-total-price')[0].innerText='$'+total
 }
+
+// Amr Mesbah tradmark
+// addtofav function from localstorage
+
+
+var favList = document.getElementById("fav");
+var favItems=JSON.parse(localStorage.getItem("products"));
+
+for(var i=0;i<favItems.length;i++){
+	var fav=document.createElement("div");
+	var image=document.createElement("img");
+	image.setAttribute("src",favItems[i].img);
+	var PName=document.createElement("span");
+	var Pprice=document.createElement("span");
+
+
+	PName.textContent=favItems[i].name ;
+	Pprice.textContent=favItems[i].price;
+	fav.appendChild(image);
+	fav.appendChild(PName);
+	fav.appendChild(Pprice);
+	
+	favList.appendChild(fav);
+}
+
+
+console.log(favItems);
