@@ -71,3 +71,12 @@ for(var i=0;i<favItems.length;i++){
 }
 localStorage.clear();
 
+var rmvItems=document.getElementsByClassName('dels');
+for(var i =0; i< rmvItems.length;i++){
+	var button = rmvItems[i]
+	button.addEventListener('click',function(event){
+		buttonClicked = event.target
+		buttonClicked.parentElement.remove()
+		
+	})
+}
