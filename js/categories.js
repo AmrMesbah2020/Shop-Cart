@@ -103,3 +103,26 @@ function addToFav(x){
     favList.push(itemList[x])
     localStorage.setItem('products',JSON.stringify(favList));
 }
+
+
+//addtoCart function
+
+var cartProducts=[];
+// function obj2(name,price,img){
+//     this.name=name;
+//     this.price=price; 
+//     this.img=img;
+//     }
+for(var i=0;i<24;i++){
+    var cartItem= new obj(names[i].textContent,prices[i].textContent,imgsSrc[i].getAttribute("src"));
+    cartProducts.push(cartItem)
+}
+console.log(cartProducts)
+var cartList=[]
+function addToCart(y){
+    cartList.push(cartProducts[y])
+    localStorage.setItem('cart_products',JSON.stringify(cartList));
+}
+
+
+
