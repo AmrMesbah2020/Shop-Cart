@@ -107,6 +107,27 @@ function addToFav(x){
 }
 
 
+//addtoCart function
+// var names1=$(".productName");
+// var prices1= $(".productPrice");
+// var imgsSrc1=$(".productCard div img");
+
+var cartProducts=[];
+function obj2(name,price,img){
+    this.name=name;
+    this.price=price; 
+    this.img=img;
+    }
+for(var i=0;i<24;i++){
+    var cartItem= new obj2(names[i].textContent,prices[i].textContent,imgsSrc[i].getAttribute("src"));
+    cartProducts.push(cartItem)
+}
+console.log(cartProducts)
+var cartList=[]
+function addToCart(e){
+    cartList.push(cartProducts[e])
+    localStorage.setItem('cart_products',JSON.stringify(cartList));
+}
 
 var y =parseInt(localStorage.getItem("cat"))
 switch(y){
