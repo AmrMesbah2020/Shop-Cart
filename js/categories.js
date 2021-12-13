@@ -105,3 +105,21 @@ function addToFav(x){
     localStorage.removeItem("products");
     localStorage.setItem('products',JSON.stringify(favList));
 }
+
+
+
+var y =parseInt(localStorage.getItem("cat"))
+switch(y){
+    case(0):
+    livingcat()
+    break;
+    case(1):
+    dinningcat()
+    break;
+    case(2):
+    kitchencat()
+    break;
+    case(3):
+    bedroomcat()
+    break;
+}

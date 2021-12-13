@@ -49,6 +49,8 @@ for (let i = 0; i < btnDin.length; i++) {
 }
 
 
-
+function check(x){
+    localStorage.setItem("cat",x);
+}
 
 
