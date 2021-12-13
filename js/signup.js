@@ -35,21 +35,21 @@ function loginval(e) {
   var namef = document.getElementById("inpName2").value;
   var password = document.getElementById("password1").value;
 if (localStorage.getItem("fullName") !== namef || localStorage.getItem("password") !== password ) {
-  document.getElementById("pname2").innerHTML = "<p style='color:#f4ca95'>* you not registar</p>";
+  document.getElementById("pname2").innerHTML = "<p style='color:#b90e1cd8'>* you not registar</p>";
   e.preventDefault();
 } else {
   document.getElementById("pname2").innerHTML = "";
 }
 
 if (namef.length < 5) {
-  document.getElementById("pname1").innerHTML = "<p style='color:#f4ca95'>* Name length must be atleast 5 characters</p>";
+  document.getElementById("pname1").innerHTML = "<p style='color:#b90e1cd8'>* Name length must be atleast 5 characters</p>";
   e.preventDefault();
 } else {
   document.getElementById("pname1").innerHTML = "";
 }
 var regE2 = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;;
 if (!regE2.test(password)) {
-  document.getElementById("pPassword1").innerHTML = "<p style='color:#f4ca95'>*Invalid password</p>";
+  document.getElementById("pPassword1").innerHTML = "<p style='color:#b90e1cd8'>*Invalid password</p>";
   e.preventDefault();
 } else {
   document.getElementById("pPassword1").innerHTML = "";
@@ -65,28 +65,28 @@ function formval(e) {
   var male = document.getElementById("rd1").checked;
   var female = document.getElementById("rd2").checked;
   if (namef.length < 5) {
-    document.getElementById("pnamef").innerHTML = "<p style='color:#f4ca95'>* Name length must be atleast 5 characters</p>";
+    document.getElementById("pnamef").innerHTML = "<p style='color:#b90e1cd8'>* Name length must be atleast 5 characters</p>";
     e.preventDefault();
   } else {
     document.getElementById("pnamef").innerHTML = "";
   }
   var regE = /^[A-Za-z]{3,50}|[0-9](@)[A-Za-z]{4,50}(.com|.org|.edu|.net)$/;
   if (!regE.test(email)) {
-    document.getElementById("pEmail").innerHTML = "<p style='color:#f4ca95'>*Invalid Email</p>";
+    document.getElementById("pEmail").innerHTML = "<p style='color:#b90e1cd8'>*Invalid Email</p>";
     e.preventDefault();
   } else {
     document.getElementById("pEmail").innerHTML = "";
   }
   var regE2 = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;;
   if (!regE2.test(password)) {
-    document.getElementById("pPassword").innerHTML = "<p style='color:#f4ca95'>*You should add a-zchar,specialchar,number and atleast6 char</p>";
+    document.getElementById("pPassword").innerHTML = "<p style='color:#b90e1cd8'>*You should add a-z char,special-char,number and atleast 6 chars</p>";
     e.preventDefault();
   } else {
     document.getElementById("pPassword").innerHTML = "";
   }
   var reg3 = /^01[0125][0-9]{8}$/;
   if (!reg3.test(phone)) {
-    document.getElementById("pphone").innerHTML = "<p style='color:#f4ca95'>*Invalid Phone you should add(012,015,010,011)in the first</p>";
+    document.getElementById("pphone").innerHTML = "<p style='color:#b90e1cd8'>*Invalid Phone , It must start with (012,015,010,011) </p>";
     e.preventDefault();
   } else {
     document.getElementById("pphone").innerHTML = "";
@@ -98,7 +98,7 @@ function formval(e) {
     document.getElementById("pchacked").innerHTML = "";
     return true;
   } else {
-    document.getElementById("pchacked").innerHTML = "<p style='color:#f4ca95'>*Is not selected</p>";
+    document.getElementById("pchacked").innerHTML = "<p style='color:#b90e1cd8'>*Is not selected</p>";
     e.preventDefault();
 
   }
@@ -109,7 +109,7 @@ function formval(e) {
     return true;
 
   } else {
-    document.getElementById("pchacked2").innerHTML = "<p style='color:#f4ca95'>*you should agree with terms and conditions</p>";
+    document.getElementById("pchacked2").innerHTML = "<p style='color:#b90e1cd8'>*you should agree with terms and conditions</p>";
     document.getElementById("btsignup").style.opacity="0.5";
 
     e.preventDefault();
