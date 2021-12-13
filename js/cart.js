@@ -37,7 +37,7 @@ function updateCartTotal(){
 	document.getElementsByClassName('cart-total-price')[0].innerText='$'+total
 }
 
-// Amr Mesbah tradmark
+
 // addtofav function from localstorage
 
 
@@ -46,10 +46,16 @@ var favItems=JSON.parse(localStorage.getItem("products"));
 
 for(var i=0;i<favItems.length;i++){
 	var fav=document.createElement("div");
+
 	var image=document.createElement("img");
 	image.setAttribute("src",favItems[i].img);
 	var PName=document.createElement("span");
 	var Pprice=document.createElement("span");
+	var del =document.createElement("button");
+	del.textContent="Remove";
+	var addCart=document.createElement("button");
+	addCart.textContent="Add to Cart"
+	
 
 
 	PName.textContent=favItems[i].name ;
@@ -57,9 +63,11 @@ for(var i=0;i<favItems.length;i++){
 	fav.appendChild(image);
 	fav.appendChild(PName);
 	fav.appendChild(Pprice);
+	fav.appendChild(del);
+	fav.appendChild(addCart);
+	
 	
 	favList.appendChild(fav);
 }
+localStorage.clear();
 
-
-console.log(favItems);

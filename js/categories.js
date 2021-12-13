@@ -79,7 +79,7 @@ function bedroomcat() {
 }
 
 
-// Amr Mesbah tradmark
+
 // addtofav function on localstorage
 var names=$(".productName");
 var prices= $(".productPrice");
@@ -100,6 +100,8 @@ for(var i=0;i<24;i++){
 console.log(itemList)
 var favList=[];
 function addToFav(x){
-    favList.push(itemList[x])
+    var r =favList.includes(itemList[x]);
+    if(!r){favList.push(itemList[x])}
+    localStorage.removeItem("products");
     localStorage.setItem('products',JSON.stringify(favList));
 }
