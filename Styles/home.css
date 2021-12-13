@@ -64,6 +64,27 @@ ul{
     transition: 0.3s;
     font-size: 16px;
   }
+  .header-social-links .cart{
+    position: relative;
+  }
+  .header-social-links .cart::before{
+    content: attr(data-count);
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 15px;
+    top: -25px;
+    text-align: center;
+    background-color: #34b7a7;
+    color: #fff;
+    opacity: 0;
+
+  }
+  .cart.on::before{
+    opacity: 1;
+  }
   .header-social-links a:hover {
     color: #34b7a7;
   }
