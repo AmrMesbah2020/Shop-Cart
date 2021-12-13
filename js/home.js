@@ -1,3 +1,15 @@
+/*Start Add To Cart*/
+var cart = document.querySelector('.cart')
+var add = document.getElementsByClassName('add');
+
+for(var but of add){
+    but.onclick = e=>{
+        let item = Number(cart.getAttribute('data-count'));
+        cart.setAttribute('data-count', item + 1);
+        cart.classList.add('on');
+    }
+}
+/*End Add To Cart*/
 var images=["../Source/2.jpg","../Source/3.jpg","../Source/4.jpg","../Source/1.jpg"];
 var slidIndex=0;
 var img=document.getElementById("slider")
