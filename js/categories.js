@@ -1,3 +1,15 @@
+/*Start Add To Cart*/
+var cart = document.querySelector('.cart')
+var add = document.getElementsByClassName('add');
+
+for(var but of add){
+    but.onclick = e=>{
+        let item = Number(cart.getAttribute('data-count'));
+        cart.setAttribute('data-count', item + 1);
+        cart.classList.add('on');
+    }
+}
+/*End Add To Cart*/
 let filterList = document.querySelectorAll(".filter li");
 filterList.forEach(li => {
     li.addEventListener('click', removeActive);
