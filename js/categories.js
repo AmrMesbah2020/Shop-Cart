@@ -79,7 +79,7 @@ function bedroomcat() {
 }
 
 
-// Amr Mesbah tradmark
+
 // addtofav function on localstorage
 var names=$(".productName");
 var prices= $(".productPrice");
@@ -100,29 +100,47 @@ for(var i=0;i<24;i++){
 console.log(itemList)
 var favList=[];
 function addToFav(x){
-    favList.push(itemList[x])
+    var r =favList.includes(itemList[x]);
+    if(!r){favList.push(itemList[x])}
+    localStorage.removeItem("products");
     localStorage.setItem('products',JSON.stringify(favList));
 }
 
 
 //addtoCart function
+// var names1=$(".productName");
+// var prices1= $(".productPrice");
+// var imgsSrc1=$(".productCard div img");
 
 var cartProducts=[];
-// function obj2(name,price,img){
-//     this.name=name;
-//     this.price=price; 
-//     this.img=img;
-//     }
+function obj2(name,price,img){
+    this.name=name;
+    this.price=price; 
+    this.img=img;
+    }
 for(var i=0;i<24;i++){
-    var cartItem= new obj(names[i].textContent,prices[i].textContent,imgsSrc[i].getAttribute("src"));
+    var cartItem= new obj2(names[i].textContent,prices[i].textContent,imgsSrc[i].getAttribute("src"));
     cartProducts.push(cartItem)
 }
 console.log(cartProducts)
 var cartList=[]
-function addToCart(y){
-    cartList.push(cartProducts[y])
+function addToCart(e){
+    cartList.push(cartProducts[e])
     localStorage.setItem('cart_products',JSON.stringify(cartList));
 }
 
-
-
+var y =parseInt(localStorage.getItem("cat"))
+switch(y){
+    case(0):
+    livingcat()
+    break;
+    case(1):
+    dinningcat()
+    break;
+    case(2):
+    kitchencat()
+    break;
+    case(3):
+    bedroomcat()
+    break;
+}
