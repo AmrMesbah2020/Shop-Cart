@@ -2,41 +2,33 @@
     padding: 0px;
     margin: 0px;
 }
-body {
-    background: #669999;
-    background: linear-gradient(to bottom right, #006666 -19%, #669999 40%);
-    min-height: 100vh;
-  }
-  #mainBox{
-    background: #e9e8e6;
-  }
-
-
-/* 
 #container{
     color:black;
     height: auto;
     background-image: url("../Source/project.jpeg");
     background-repeat: round;
     
-} */
-/* #mainBox{
+}
+#mainBox{
    border: 2px solid gray;
    padding-left: 1%;
    margin: auto auto;
    background-color: white;
-} */
+}
 a{
     text-decoration: none;
 }
-
 #navBar{
-    background-color: orange;
-    /* margin-top: 5%; */
+    background-color: #34b7a7;
+    margin-top: 5%;
     border-radius: 5%;
 }
-#navBar a{
-    color: black;
+#a1{
+color: gray;
+font-weight: bold;
+}
+#a2{
+    color: white;
     font-weight: bold;
    
 }
@@ -46,10 +38,10 @@ a{
     margin: 3%;
     font-weight: 2px;
 }
-/* #firstline{
+#firstline{
     color: rgb(145, 141, 141);
     
-} */
+}
 i{
     margin-right: 5%;
 }
@@ -57,14 +49,7 @@ i{
     background-color: white;
     height: 700px;
 }
-#allElement a{
-   color:orange;
-  
-}
-#backBtn a{
-   
-    color:  #669999;
-}
+
 .imgeDiv{
      height: 110px;
   
@@ -83,7 +68,7 @@ a:hover{
     text-decoration: none;
     opacity: .4;
 }
-#message{
+#messager{
     background-color:white;
     height: 400px;
 }
@@ -91,9 +76,14 @@ a:hover{
 #comment,#para,#sent{
     margin: 3%;
 }
+
 #para{
-    color:orange;
+    color:#34b7a7;
 }
 #sent{
-color:white;
+    background-color:#34b7a7 ;
+    color:white;
+}
+#message{
+    display: none;
 }

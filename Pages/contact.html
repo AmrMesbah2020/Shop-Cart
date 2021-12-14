@@ -62,8 +62,8 @@
     <!-- End Header -->
 
     <!-- start of switcher -->
-    <div id="container cart_container">
-        <div class="container text-white py-5 text-center">
+    <div>
+        <div class=" text-white text-center">
             <h1 id="firstline" class="display-4"> Contact Us </h1>
         </div>
         <div class="row d-flex justify-content-center">
@@ -72,24 +72,25 @@
 
                 <ul class="nav nav-tabs d-flex justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" id="a1" onclick="selecter(this.id,'a2')" href="#" target="_self">Our
+                        <a class="nav-link active" id="a1" >Our
                             Contact Channels </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="a2" onclick="selecter(this.id,'a1')" href="./message.html"
-                            target="_self"> Your Opnion</a>
+                        <a class="nav-link" id="a2" > Your Opnion</a>
                     </li>
                 </ul>
             </div>
         </div>
-
+    </div>
         <!-- end of switcher -->
 
         <!-- Contact Us content -->
+        <div id="contact">
         <div class="row d-flex justify-content-center mb-5 rounded shadow-sm ">
 
             <div class="col-md-10" id="allElement">
 
+        
                 <div class="row" id="secondline">
                     <p class="h3 d-flex justify-content-center" style="font-weight: bolder;">find out our contacts </p>
                 </div>
@@ -165,7 +166,7 @@
                         </div>
                     </div>
                 </div>
-
+          
                 <br>
                 <br>
                 <br>
@@ -174,10 +175,43 @@
                     <a href="categories.html">
                         <i class="fas fa-arrow-left mr-2"></i> Continue Shopping</a>
                 </div>
-            </div>
         </div>
     </div>
+</div>
+<div id ="message">
+    <div class="row d-flex justify-content-center mb-5 rounded shadow-sm ">
+
+        <div class="col-md-10" id="allElement">
+
+            <div class="row d-flex justify-content-center">
+
+                <div class="col-md-6" id="messager">
+                    <p class="h3 m-5 d-flex justify-content-center" id="para"> Send Your Message</p>
+                    <div id="usrform" class="d-flex justify-content-center">
+                        <textarea rows="6" cols="60" id="comment" style="padding: 5%; "
+                            placeholder=" Send Your Message ..."></textarea>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn" id="sent"> Send </button>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div id="backBtn" class="row m-5 mt-3 ">
+                <a href="categories.html">
+                    <i class="fas fa-arrow-left mr-2"></i> Continue Shopping</a>
+            </div>
+
+        </div>
     </div>
+</div>
     <!-- Contact Us content end  -->
 
     <!-- Start footer -->
@@ -257,6 +291,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../js/home.js"></script>
+    <script src="../js/contact-us.js"></script>
 </body>
 
 </html>

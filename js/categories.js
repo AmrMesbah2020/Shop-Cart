@@ -98,7 +98,7 @@ for(var i=0;i<24;i++){
     itemList.push(item)
 }
 
-// console.log(itemList)
+
 var favList=[];
 function addToFav(x){
     var r =favList.includes(itemList[x]);
@@ -132,8 +132,8 @@ function addToCart(e){
 
 
 
-var y =parseInt(localStorage.getItem("cat"))
-switch(y){
+var catIndex =parseInt(localStorage.getItem("catIndex"))
+switch(catIndex){
     case(0):
     livingcat()
     break;
@@ -147,8 +147,10 @@ switch(y){
     bedroomcat()
     break;
 }
-localStorage.removeItem("cat")
-/*Start Add To Cart*/
+localStorage.removeItem("catIndex")
+
+
+// /*Start Add To Cart*/
 // var cart = document.querySelector('.cart')
 // var add = document.getElementsByClassName('add');
 
@@ -159,4 +161,4 @@ localStorage.removeItem("cat")
 //         cart.classList.add('on');
 //     }
 // }
-/*End Add To Cart*/
+// /*End Add To Cart*/
