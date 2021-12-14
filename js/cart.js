@@ -15,13 +15,13 @@ for(var i=0;i<cartItems.length;i++){
 	</th>
 	<td class="border-0 align-middle cart-price"><strong>${cartItems[i].price}</strong></td>
 	 <td data-th="Quantity" style="width:10%">
-			  <input type="number" class="form-control form-control-lg text-center mt-3 cart-quantity-input" value="1">
+			  <input type="number" class="form-control form-control-lg text-center mt-3 cart-quantity-input" value="1" min="1">
 		  </td>
-	<td class="border-0 align-middle"><button type="button" class="btn btn-danger">Remove</button></td>`
+	<td class="border-0 align-middle"><button type="button" class="btn btn-danger adds">Remove</button></td>`
 	cartRow.innerHTML=cartRowContent
   console.log(cartItems)
   cartList.append(cartRow)
-  cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click',removeCartItem)
+  cartRow.getElementsByClassName('adds')[0].addEventListener('click',removeCartItem)
   cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('chang',quantityChanged)
 
 	
@@ -55,7 +55,7 @@ function quantityChanged(event){
 
 //remove item function
 
-var removeCartItemButtons=document.getElementsByClassName('btn-danger');
+var removeCartItemButtons=document.getElementsByClassName('adds');
 for(var i =0; i< removeCartItemButtons.length;i++){
 	var button = removeCartItemButtons[i]
 	button.addEventListener('click',removeCartItem)
@@ -65,8 +65,14 @@ for(var i =0; i< removeCartItemButtons.length;i++){
 }
 function removeCartItem(event){
 	    buttonClicked = event.target
+		var x=parseFloat(buttonClicked.parentElement.previousElementSibling.previousElementSibling.textContent.replace("$",""))
+		var q= buttonClicked.parentElement.previousElementSibling.children[0].value
+		var oldTotal=$('.cart-total-price')[0].textContent
+		var newTotal=parseFloat(oldTotal.replace('$',''))-x*q;
+		console.log(newTotal)
+		$('.cart-total-price')[0].textContent=newTotal.toString();
 		buttonClicked.parentElement.parentElement.remove()
-        updateCartTotal()
+        
 
 }
 
@@ -74,17 +80,18 @@ function removeCartItem(event){
 //update subtotal function
 
 function updateCartTotal(){
-	
 	var total = 0
 	for(var i=0;i<cartItems.length;i++){
 		var price =parseFloat(cartItems[i].price.replace('$',''))
 		var quantityele=document.getElementsByClassName('cart-quantity-input')[i]
 		var quantity = quantityele.value
-		total = total+quantity * price;
+		console.log(quantity);
+		var total = total+quantity * price;
+
 
 	}
 document.getElementsByClassName('cart-total-price')[0].innerText='$'+total
 }
 
 // remove favlist from local storage
-localStorage.removeItem('cart_products');
+// localStorage.removeItem('cart_products');
