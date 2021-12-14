@@ -1,15 +1,4 @@
-/*Start Add To Cart*/
-var cart = document.querySelector('.cart')
-var add = document.getElementsByClassName('add');
 
-for(var but of add){
-    but.onclick = e=>{
-        let item = Number(cart.getAttribute('data-count'));
-        cart.setAttribute('data-count', item + 1);
-        cart.classList.add('on');
-    }
-}
-/*End Add To Cart*/
 let filterList = document.querySelectorAll(".filter li");
 filterList.forEach(li => {
     li.addEventListener('click', removeActive);
@@ -109,12 +98,12 @@ for(var i=0;i<24;i++){
     itemList.push(item)
 }
 
-console.log(itemList)
+// console.log(itemList)
 var favList=[];
 function addToFav(x){
     var r =favList.includes(itemList[x]);
     if(!r){favList.push(itemList[x])}
-    localStorage.removeItem("products");
+    
     localStorage.setItem('products',JSON.stringify(favList));
 }
 
@@ -141,6 +130,8 @@ function addToCart(e){
     localStorage.setItem('cart_products',JSON.stringify(cartList));
 }
 
+
+
 var y =parseInt(localStorage.getItem("cat"))
 switch(y){
     case(0):
@@ -156,3 +147,16 @@ switch(y){
     bedroomcat()
     break;
 }
+localStorage.removeItem("cat")
+/*Start Add To Cart*/
+// var cart = document.querySelector('.cart')
+// var add = document.getElementsByClassName('add');
+
+// for(var but of add){
+//     but.onclick = e=>{
+//         let item = Number(cart.getAttribute('data-count'));
+//         cart.setAttribute('data-count', item + 1);
+//         cart.classList.add('on');
+//     }
+// }
+/*End Add To Cart*/
