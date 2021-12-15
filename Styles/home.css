@@ -199,6 +199,22 @@ ul{
       left: -100%;
     }
   }
+  .navbar .cart i{
+    font-size: 25px;
+  }
+  .navbar .cart span{
+    position:relative;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 15px;
+    top: -20px;
+    text-align: center;
+    background-color: #34b7a7;
+    color: #fff;
+  }
+
   /* ---------------------------------- */
   .rounded-circle{
     transition: all 2s ease-out;

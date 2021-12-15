@@ -85,7 +85,6 @@ function updateCartTotal(){
 		var price =parseFloat(cartItems[i].price.replace('$',''))
 		var quantityele=document.getElementsByClassName('cart-quantity-input')[i]
 		var quantity = quantityele.value
-		console.log(quantity);
 		var total = total+quantity * price;
 
 
@@ -93,5 +92,10 @@ function updateCartTotal(){
 document.getElementsByClassName('cart-total-price')[0].innerText='$'+total
 }
 
+
 // remove favlist from local storage
-// localStorage.removeItem('cart_products');
+localStorage.removeItem('cart_products');
+
+document.querySelector('.cart span').textContent=localStorage.getItem("cartCount")
+
+localStorage.removeItem("cartCount")

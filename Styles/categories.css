@@ -2,10 +2,13 @@
     box-sizing: border-box;
 }
 
+.productCard{
+    transition: all .5s ease-in-out;
+}
 .productCard:hover {
-
-    transform: translateY(-5px);
-    box-shadow: 2px 2px #969b9a, -2px -2px 2px#969b9a ;
+    transform: translateY(-3px);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 30%) ;
+    background-color: #fffff9;
 }
 
 .categoryCard:hover {

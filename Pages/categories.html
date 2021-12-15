@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="..\Styles\categories.css" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <title>Categories</title>
     <style>
         #sidebar li.active,
@@ -47,30 +46,22 @@
     <header id="header">
         <div class="container-fluid d-flex justify-content-between align-items-center">
 
-            <h1 class="logo me-auto me-lg-0"><a href="index.html">Artex</a></h1>
+            <h1 class="logo me-auto me-lg-0">Artex</h1>
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a  href="Home.html">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="./categories.html"
-                        role="button" aria-haspopup="true" aria-expanded="false" aria-disabled="" class="active">
-                        Categories </a>
-                        <ul class="dropdown-menu">
-                            <li onclick="kitchencat()"><a class="dropdown-item " href="#" aria-disabled="">Kitchens</a></li>
-                            <li onclick="livingcat()"><a class="dropdown-item " href="#" aria-disabled="">Living room</a></li>
-                            <li onclick="dinningcat()"><a class="dropdown-item " href="#" aria-disabled="">Dining room</a></li>
-                            <li onclick="bedroomcat()"><a class="dropdown-item " href="#" aria-disabled="">Bedroom</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a class="active" href="./categories.html" disabled="true" onclick="return false">Categories</a></li>
                     <li><a href="./contact.html">Conatct</a></li>
                     <li><a href="Sign up.html">Sign</a></li>
+                    <li class="cart">
+                        <a href="./cart1.html">Cart<i class="fas fa-shopping-cart"></i><span>0</span></a>
+                    </li>
                 </ul>
 
             </nav>
             <!-- .navbar -->
 
             <div class="header-social-links d-none d-lg-block">
-                <a href="./cart1.html" class="cart"><i class="bx bx-basket"></i></a>
                 <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -121,12 +112,10 @@
             <div class="container">
 
                 <!-- header : category name -->
-              
-
                 <!-- first row  -->
-                <div class="row d-flex justify-content-around" style="margin-left:30px;">
+                <div class="row d-flex justify-content-around mb-3" style="margin-left:30px;">
                     <!-- product 1 -->
-                    <div class=" col-sm-4  m-10 border-dark Kitchens ">
+                    <div class=" col-sm-4  m-10 border-dark Kitchens  ">
                         <div class="card  productCard ">
                             <div class="row me-auto  ms-1 mt-2">
                                 <img class="  rounded " src="../Source/ProductsImages/kit1.jpg" alt="Card image">
@@ -299,7 +288,7 @@
             <!-- Start Body 2-->
             <div class="container">
                 <!-- first row  -->
-                <div class="row d-flex justify-content-around" style="margin-left: 30px;">
+                <div class="row d-flex justify-content-around mb-3" style="margin-left: 30px;">
                     <!-- product 1 -->
                     <div class=" col-sm-4  m-10 border-dark  DinningRoom  ">
                         <div class="card  productCard ">
@@ -473,7 +462,7 @@
             <div class="container">
 
                 <!-- first row  -->
-                <div class="row d-flex justify-content-around" style="margin-left: 30px;">
+                <div class="row d-flex justify-content-around mb-3" style="margin-left: 30px;">
                     <!-- product 1 -->
                     <div class=" col-sm-4  m-10 border-dark  LivingRoom">
                         <div class="card  productCard ">
@@ -647,7 +636,7 @@
 
 
                 <!-- first row  -->
-                <div class="row d-flex justify-content-around" style="margin-left: 30px;">
+                <div class="row d-flex justify-content-around mb-3" style="margin-left: 30px;">
                     <!-- product 1 -->
                     <div class=" col-sm-4  m-10 border-dark BedRoom">
                         <div class="card  productCard ">
@@ -910,3 +899,4 @@
 </body>
 
 </html>
+

@@ -45,3 +45,9 @@ function removeFavItem(event){
         updateCartTotal()
 
 }
+//add to cart from favourits
+
+
+
+
+

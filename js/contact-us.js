@@ -49,4 +49,5 @@ function recive() {
     }
 
 }
+document.querySelector('.cart span').textContent=localStorage.getItem("cartCount")
 //******************************************************************* */
