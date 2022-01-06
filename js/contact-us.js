@@ -49,5 +49,5 @@ function recive() {
     }
 
 }
-document.querySelector('.cart span').textContent=localStorage.getItem("cartCount")
+document.querySelector('.cart span').textContent=sessionStorage.getItem("cartCount")
 //******************************************************************* */

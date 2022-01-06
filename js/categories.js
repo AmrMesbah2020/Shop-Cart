@@ -120,6 +120,7 @@ function addToFav(x) {
 // var names1=$(".productName");
 // var prices1= $(".productPrice");
 // var imgsSrc1=$(".productCard div img");
+var O=new obj2;
 
 var cartProducts = [];
 
@@ -136,7 +137,11 @@ console.log(cartProducts)
 var cartList = []
 
 function addToCart(e) {
-    cartList.push(cartProducts[e])
+    var r = cartList.includes(cartProducts[e]);
+    if (!r) {
+        cartList.push(cartProducts[e])
+    }
+    O=cartProducts[e];
     localStorage.setItem('cart_products', JSON.stringify(cartList));
 }
 
@@ -159,92 +164,87 @@ switch (catIndex) {
 }
 localStorage.removeItem("catIndex")
 
+//...................toggle function for cart button*****
+var cartCounter=0;
+if(sessionStorage.cartCount){
+    cartCounter==sessionStorage.getItem("cartCount")
+}
 
 
+/*..........................add tofev*********************/
+let elementsArray = document.querySelectorAll(".btn-outline-danger");
+for (let i = 0; i < elementsArray.length; i++) {
+    elementsArray[i].addEventListener('click', togfav);
+    if (localStorage.getItem(elementsArray[i].id) == elementsArray[i].id) {
+        elementsArray[i].children[0].classList.add("fas");
+    }
+
+}
+
+function togfav() {
+
+    if (this.children[0].classList.contains("far")) {
+        localStorage.setItem(this.id, this.id)
+        this.children[0].classList.remove("far");
+        this.children[0].classList.add("fas");
+    } else {
+        this.children[0].classList.add("far");
+        this.children[0].classList.remove("fas");
+        localStorage.removeItem(this.id, this.id)
+        removeItemsFromFav()
+    }
+}
+/*******************************function remove favourit item */
+var indexOfRemovedItem;
+  function removeItemsFromFav(){
+      for(var e=0;e<favList.length;e++){
+          if(favList[i] === O){
+              indexOfRemovedItem=i;
+          }
+      }
+      favList.splice(indexOfRemovedItem,1);
+      console.log(favList);
+      localStorage.setItem('products', JSON.stringify(favList));
+      
+  }
+
+/*************************************counter************* */
+ var itemCounter=sessionStorage.getItem("cartCount")
+document.querySelector('.cart span').textContent=itemCounter;
 
 
-// /*Start Add To Cart */
-// var carts = document.querySelectorAll('.add');
-// for (var i = 0; i < carts.length; i++) {
-//     carts[i].addEventListener('click', () => {
-//         cartNumbers();
-//     })
-// }
-// function onLoadCartNumbers(){
-//     var productNumbers = localStorage.getItem('cartNumbers');
-//     if (productNumbers) {
-//         document.querySelector('.cart span').textContent = productNumbers;
-//     }
-// }
-// function cartNumbers() {
-//     var productNumbers = localStorage.getItem('cartNumbers');
-
-//     productNumbers = parseInt(productNumbers);
-
-//     if (productNumbers) {
-//         localStorage.setItem('cartNumbers ', productNumbers + 1);
-//         document.querySelector('.cart span').textContent = productNumbers + 1;
-//     } 
-//      else {
-
-//         localStorage.setItem('cartNumbers', 1)
-//         document.querySelector('.cart span').textContent = 1;
-//     }
-// };
-// onLoadCartNumbers();
-
-// /*End Add To Cart */
-
-var cartCounter=0
 // function for add to cart 
 let elementsArray2 = document.querySelectorAll(".btn-outline-info");
 for(let i=0;i<elementsArray2.length;i++){
     elementsArray2[i].addEventListener('click',togcart)
-}
-function togcart(e){
-  let classes= this.classList;
-  let act=false;
-    for(let i=0;i<classes.length;i++){
-            if(classes[i]==="active"){
-                act=true;
-                break;
-            }
+    if (localStorage.getItem(elementsArray2[i].id) ==  elementsArray2[i].id) {
+        elementsArray2[i].children[0].classList.add("fa-shopping-cart");
     }
-if(act===true){
-    document.querySelector('.cart span').textContent = --cartCounter;
-    this.classList.remove("active");
-    
-}
-else{
-    this.classList.add("active");
-    document.querySelector('.cart span').textContent = ++cartCounter;
-}
-localStorage.setItem("cartCount",cartCounter);
-}
 
-//function for add to fav
-let elementsArray = document.querySelectorAll(".btn-outline-danger");
-for(let i=0;i<elementsArray.length;i++){
-    elementsArray[i].addEventListener('click',togfav)
 }
-function togfav(e){
-    let classes= this.classList;
-    let act=false;
-      for(let i=0;i<classes.length;i++){
-              if(classes[i]==="active"){
-                  act=true;
-                  break;
-              }
+function togcart(){
+    if (this.children[0].classList.contains("fa-cart-plus")) {
+        localStorage.setItem(this.id, this.id)
+        this.children[0].classList.remove("fa-cart-plus");
+        this.children[0].classList.add("fa-shopping-cart");
+    } else {
+        this.children[0].classList.add("fa-cart-plus");
+        this.children[0].classList.remove("fa-shopping-cart");
+        localStorage.removeItem(this.id, this.id)
+        removeItemsFromCart()
+    }
+}
+//........
+var indexOfRemovedItem;
+function removeItemsFromCart(){
+      for(var e=0;e<cartList.length;e++){
+          if(cartList[i] === O){
+              indexOfRemovedItem=i;
+          }
       }
-  if(act===true){
-      this.classList.remove("active");
-      removeCartItem(this);
-  
-  }
-  else{
-      this.classList.add("active");
-  }
-  
+      cartList.splice(indexOfRemovedItem,1);
+      console.log(cartList);
+      localStorage.setItem('cart_products', JSON.stringify(cartList));
   }
 
 

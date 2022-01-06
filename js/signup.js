@@ -34,26 +34,26 @@ el2.addEventListener("submit", loginval)
 function loginval(e) {
   var namef = document.getElementById("inpName2").value;
   var password = document.getElementById("password1").value;
-if (localStorage.getItem("fullName") !== namef || localStorage.getItem("password") !== password ) {
-  document.getElementById("pname2").innerHTML = "<p style='color:#b90e1cd8'>* you not registar</p>";
-  e.preventDefault();
-} else {
-  document.getElementById("pname2").innerHTML = "";
-}
+  if (localStorage.getItem("fullName") !== namef || localStorage.getItem("password") !== password) {
+    document.getElementById("pname2").innerHTML = "<p style='color:#b90e1cd8'>* your not registar</p>";
+    e.preventDefault();
+  } else {
+    document.getElementById("pname2").innerHTML = "";
+  }
 
-if (namef.length < 5) {
-  document.getElementById("pname1").innerHTML = "<p style='color:#b90e1cd8'>* Name length must be atleast 5 characters</p>";
-  e.preventDefault();
-} else {
-  document.getElementById("pname1").innerHTML = "";
-}
-var regE2 = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;;
-if (!regE2.test(password)) {
-  document.getElementById("pPassword1").innerHTML = "<p style='color:#b90e1cd8'>*Invalid password</p>";
-  e.preventDefault();
-} else {
-  document.getElementById("pPassword1").innerHTML = "";
-}
+  if (namef.length < 5) {
+    document.getElementById("pname1").innerHTML = "<p style='color:#b90e1cd8'>* Name length must be atleast 5 characters</p>";
+    e.preventDefault();
+  } else {
+    document.getElementById("pname1").innerHTML = "";
+  }
+  var regE2 = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+  if (!regE2.test(password)) {
+    document.getElementById("pPassword1").innerHTML = "<p style='color:#b90e1cd8'>*Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character</p>";
+    e.preventDefault();
+  } else {
+    document.getElementById("pPassword1").innerHTML = "";
+  }
 }
 /***************validiton signup************************/
 function formval(e) {
@@ -70,16 +70,16 @@ function formval(e) {
   } else {
     document.getElementById("pnamef").innerHTML = "";
   }
-  var regE = /^[A-Za-z]{3,50}|[0-9](@)[A-Za-z]{4,50}(.com|.org|.edu|.net)$/;
+  var regE = /^[a-z0-9](\.?[a-z0-9]){5,}@(yahoo|gmail)\.com$/;
   if (!regE.test(email)) {
     document.getElementById("pEmail").innerHTML = "<p style='color:#b90e1cd8'>*Invalid Email</p>";
     e.preventDefault();
   } else {
     document.getElementById("pEmail").innerHTML = "";
   }
-  var regE2 = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;;
+  var regE2 = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
   if (!regE2.test(password)) {
-    document.getElementById("pPassword").innerHTML = "<p style='color:#b90e1cd8'>*You should add a-z char,special-char,number and atleast 6 chars</p>";
+    document.getElementById("pPassword").innerHTML = "<p style='color:#b90e1cd8'>*Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character</p>";
     e.preventDefault();
   } else {
     document.getElementById("pPassword").innerHTML = "";
@@ -104,17 +104,16 @@ function formval(e) {
   }
   if (check == true) {
     document.getElementById("pchacked2").innerHTML = "";
-    document.getElementById("btsignup").style.opacity="1";
+    document.getElementById("btsignup").style.opacity = "1";
 
     return true;
 
   } else {
     document.getElementById("pchacked2").innerHTML = "<p style='color:#b90e1cd8'>*you should agree with terms and conditions</p>";
-    document.getElementById("btsignup").style.opacity="0.5";
+    document.getElementById("btsignup").style.opacity = "0.5";
 
     e.preventDefault();
   }
 }
 
 /************************************storge*************** */
-

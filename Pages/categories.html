@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -50,7 +51,8 @@
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li><a href="Home.html">Home</a></li>
-                    <li><a class="active" href="./categories.html" disabled="true" onclick="return false">Categories</a></li>
+                    <li><a class="active" href="./categories.html" disabled="true" onclick="return false">Categories</a>
+                    </li>
                     <li><a href="./contact.html">Conatct</a></li>
                     <li><a href="Sign up.html">Sign</a></li>
                     <li class="cart">
@@ -62,6 +64,8 @@
             <!-- .navbar -->
 
             <div class="header-social-links d-none d-lg-block">
+                <a href="#" disabled="true" class="user" onclick="return false">
+                    <i class="far fa-user"></i> <span id="555"></span></a>
                 <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -101,7 +105,7 @@
 
         </div>
 
-        <div class="col-lg-10  categories mt-5 mb-5">
+        <div class="col-lg-10  categories mt-5 mb-5" id="bigdiv">
 
 
             <div class="row d-flex align-items-start" style="margin-left:30px;">
@@ -129,11 +133,11 @@
                             </div>
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
-                                <button class="btn btn-outline-danger" onclick="addToFav(0)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn1" class="btn btn-outline-danger " onclick="addToFav(0)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(0)">
-                                    <h5><i class="fas fa-cart-plus" ></i></h5>
+                                <button id="bt1" class="btn btn-outline-info mt-3 add " onclick="addToCart(0)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
                             </div>
                         </div>
@@ -155,11 +159,11 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(1)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn2" class="btn btn-outline-danger " onclick="addToFav(1)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(1)">
-                                    <h5><i class="fas fa-cart-plus" ></i></h5>
+                                <button id="bt2" class="btn btn-outline-info mt-3 add " onclick="addToCart(1)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -182,12 +186,13 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(2)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn3" class="btn btn-outline-danger " onclick="addToFav(2)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(2)">
-                                    <h5><i class="fas fa-cart-plus" ></i></h5>
+                                <button id="bt3" class="btn btn-outline-info mt-3 add " onclick="addToCart(2)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
+
 
                             </div>
                         </div>
@@ -213,11 +218,11 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(3)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn4" class="btn btn-outline-danger " onclick="addToFav(3)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(3)">
-                                    <h5><i class="fas fa-cart-plus" ></i></h5>
+                                <button id="bt3" class="btn btn-outline-info mt-3 add " onclick="addToCart(3)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -239,12 +244,11 @@
                             </div>
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
-
-                                <button class="btn btn-outline-danger" onclick="addToFav(4)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn5" class="btn btn-outline-danger " onclick="addToFav(4)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
                                 <button class="btn btn-outline-info mt-3 add " onclick="addToCart(4)">
-                                    <h5><i class="fas fa-cart-plus" ></i></h5>
+                                    <h5><i class="fas fa-cart-plus"></i></h5>
                                 </button>
 
                             </div>
@@ -267,11 +271,11 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(5)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn6" class="btn btn-outline-danger " onclick="addToFav(5)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(5)">
-                                    <h5><i class="fas fa-cart-plus" ></i></h5>
+                                <button id="bt6" class="btn btn-outline-info mt-3 add " onclick="addToCart(5)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -304,11 +308,11 @@
                             </div>
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
-                                <button class="btn btn-outline-danger" onclick="addToFav(6)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn7" class="btn btn-outline-danger " onclick="addToFav(6)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(6)">
-                                    <h5><i class="fas fa-cart-plus" ></i></h5>
+                                <button id="bt7" class="btn btn-outline-info mt-3 add " onclick="addToCart(6)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
                             </div>
                         </div>
@@ -330,11 +334,11 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(7)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn8" class="btn btn-outline-danger " onclick="addToFav(7)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(7)">
-                                    <h5><i class="fas fa-cart-plus" ></i></h5>
+                                <button id="bt8" class="btn btn-outline-info mt-3 add " onclick="addToCart(7)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -357,11 +361,11 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(8)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn9" class="btn btn-outline-danger " onclick="addToFav(8)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(8)">
-                                    <h5><i class="fas fa-cart-plus" ></i></h5>
+                                <button id="bt9" class="btn btn-outline-info mt-3 add " onclick="addToCart(8)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -388,11 +392,11 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(9)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn10" class="btn btn-outline-danger " onclick="addToFav(9)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(9)">
-                                    <h5><i class="fas fa-cart-plus" ></i></h5>
+                                <button id="bt10" class="btn btn-outline-info mt-3 add " onclick="addToCart(9)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -415,12 +419,13 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(10)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn11" class="btn btn-outline-danger " onclick="addToFav(10)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(10)">
-                                    <h5><i class="fas fa-cart-plus"></i></h5>
+                                <button id="bt11" class="btn btn-outline-info mt-3 add " onclick="addToCart(10)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
+
 
                             </div>
                         </div>
@@ -442,11 +447,11 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(11)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn12" class="btn btn-outline-danger " onclick="addToFav(11)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(11)">
-                                    <h5><i class="fas fa-cart-plus"></i></h5>
+                                <button id="bt12" class="btn btn-outline-info mt-3 add " onclick="addToCart(11)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -478,11 +483,11 @@
                             </div>
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
-                                <button class="btn btn-outline-danger" onclick="addToFav(12)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn13" class="btn btn-outline-danger " onclick="addToFav(12)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(12)">
-                                    <h5><i class="fas fa-cart-plus"></i></h5>
+                                <button id="bt13" class="btn btn-outline-info mt-3 add " onclick="addToCart(12)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
                             </div>
                         </div>
@@ -504,11 +509,12 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(13)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn14" class="btn btn-outline-danger " onclick="addToFav(13)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(13)">
-                                    <h5><i class="fas fa-cart-plus"></i></h5>
+
+                                <button id="bt14" class="btn btn-outline-info mt-3 add " onclick="addToCart(13)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -531,11 +537,12 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(14)">
-                                    <h5><i class="far fa-heart"></i></h5>
+
+                                <button id="btn15" class="btn btn-outline-danger " onclick="addToFav(14)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(14)">
-                                    <h5><i class="fas fa-cart-plus"></i></h5>
+                                <button id="bt15" class="btn btn-outline-info mt-3 add " onclick="addToCart(14)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -561,13 +568,13 @@
                             </div>
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
+                                <button id="btn16" class="btn btn-outline-danger " onclick="addToFav(15)">
+                                    <i class="far fa-heart h5"></i>
+                                </button>
+                                <button id="bt16" class="btn btn-outline-info mt-3 add " onclick="addToCart(15)">
+                                    <i class="fas fa-cart-plus h5"></i>
+                                </button>
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(15)">
-                                    <h5><i class="far fa-heart"></i></h5>
-                                </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(15)">
-                                    <h5><i class="fas fa-cart-plus"></i></h5>
-                                </button>
 
                             </div>
                         </div>
@@ -589,11 +596,11 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(16)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn17" class="btn btn-outline-danger " onclick="addToFav(16)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(16)">
-                                    <h5><i class="fas fa-cart-plus"></i></h5>
+                                <button id="bt17" class="btn btn-outline-info mt-3 add " onclick="addToCart(16)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -616,12 +623,13 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(17)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn18" class="btn btn-outline-danger " onclick="addToFav(17)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(17)">
-                                    <h5><i class="fas fa-cart-plus"></i></h5>
+                                <button id="bt18" class="btn btn-outline-info mt-3 add " onclick="addToCart(17)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
+
 
                             </div>
                         </div>
@@ -646,17 +654,17 @@
 
                             <div class=" row card-body d-flex flex-column  justify-content-between ">
                                 <h2 class="productName"> Golden MakeUp-Table </h2>
-                                <p class=""> a set of golden decoration pecies  </p>
+                                <p class=""> a set of golden decoration pecies </p>
                                 <pre class="productPrice h5">                   400$ </pre>
                                 <br>
                             </div>
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
-                                <button class="btn btn-outline-danger" onclick="addToFav(18)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn19" class="btn btn-outline-danger " onclick="addToFav(18)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(18)">
-                                    <h5><i class="fas fa-cart-plus"></i></h5>
+                                <button id="bt19" class="btn btn-outline-info mt-3 add " onclick="addToCart(18)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
                             </div>
                         </div>
@@ -670,19 +678,18 @@
                             </div>
 
                             <div class=" row card-body d-flex flex-column  justify-content-between ">
-                                <h2 class="productName"> Simple Wooden  </h2>
+                                <h2 class="productName"> Simple Wooden </h2>
                                 <p class=""> Simple Wooden high Bed with wooden stand. <br></p>
                                 <pre class="productPrice h5">                  500$ </pre>
                                 <br>
                             </div>
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
-
-                                <button class="btn btn-outline-danger" onclick="addToFav(19)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn20" class="btn btn-outline-danger " onclick="addToFav(19)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(19)">
-                                    <h5><i class="fas fa-cart-plus"></i></h5>
+                                <button id="bt20" class="btn btn-outline-info mt-3 add " onclick="addToCart(19)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -705,11 +712,11 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(20)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn21" class="btn btn-outline-danger " onclick="addToFav(20)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(20)">
-                                    <h5><i class="fas fa-cart-plus"></i></h5>
+                                <button id="bt21" class="btn btn-outline-info mt-3 add " onclick="addToCart(20)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -735,12 +742,11 @@
                             </div>
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
-
-                                <button class="btn btn-outline-danger" onclick="addToFav(21)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn22" class="btn btn-outline-danger " onclick="addToFav(21)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(21)">
-                                    <h5><i class="fas fa-cart-plus"></i></h5>
+                                <button id="bt22" class="btn btn-outline-info mt-3 add " onclick="addToCart(21)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -763,11 +769,11 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(22)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn23" class="btn btn-outline-danger " onclick="addToFav(22)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(22)">
-                                    <h5><i class="fas fa-cart-plus"></i></h5>
+                                <button id="bt23" class="btn btn-outline-info mt-3 add " onclick="addToCart(22)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -790,11 +796,11 @@
 
                             <div class=" row card-body d-flex ms-4 me-4 align-items-center">
 
-                                <button class="btn btn-outline-danger" onclick="addToFav(23)">
-                                    <h5><i class="far fa-heart"></i></h5>
+                                <button id="btn24" class="btn btn-outline-danger " onclick="addToFav(23)">
+                                    <i class="far fa-heart h5"></i>
                                 </button>
-                                <button class="btn btn-outline-info mt-3 add " onclick="addToCart(23)">
-                                    <h5><i class="fas fa-cart-plus" ></i></h5>
+                                <button id="bt24" class="btn btn-outline-info mt-3 add " onclick="addToCart(23)">
+                                    <i class="fas fa-cart-plus h5"></i>
                                 </button>
 
                             </div>
@@ -842,8 +848,8 @@
                 </ul>
                 <p class="text">
                     - Our quality, solutions and market approach supports innovative partnership,
-                trust and sustainability for our suppliers, customers and employees.<br>
-                - we make furniture for life and take Pride in our Danish roots and Craftmanship.
+                    trust and sustainability for our suppliers, customers and employees.<br>
+                    - we make furniture for life and take Pride in our Danish roots and Craftmanship.
                 </p>
             </div>
             <div class="box">
@@ -893,10 +899,14 @@
     <!-- <script src="../js/home.js"></script> -->
     <script src="../js/products.js"></script>
     <script src="../js/categories.js"></script>
-
-
+    <script>
+        if (localStorage.getItem("fullName") == null) {
+            getElementById("555").textContent = ""
+        } else {
+            document.getElementById("555").textContent = " " + localStorage.getItem("fullName");
+        }
+    </script>
 
 </body>
 
 </html>
-

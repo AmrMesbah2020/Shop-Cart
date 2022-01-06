@@ -35,7 +35,8 @@
             <!-- .navbar -->
 
             <div class="header-social-links d-none d-lg-block">
-		 <a href="./cart1.html" class="cart"><i class="bx bx-basket"></i></a>
+              <a href="#" disabled="true" class="user" onclick="return false">
+                <i class="far fa-user"></i> <span id="555"></span></a>
                 <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -78,7 +79,7 @@
               </tbody>
             </table>
             <div class="float-right text-right">
-                <h4>Subtotal:</h4>
+                <h4>Total:</h4>
                 <h1 class="cart-total-price">$0</h1>
             </div>
           </div>
@@ -173,7 +174,7 @@
     </p>
 </div>
 <script type="text/javascript" src="../js/cart.js"></script>
-<script src="../js/categories.js"></script>
+<!-- <script src="../js/categories.js"></script> -->
 <script src="../js/addToFav.js"></script>
 <script>
   $(document).ready(function(){
@@ -196,6 +197,14 @@
   $("#fav div button:odd").addClass("btn btn-primary carts")
   $(".carts").attr("onclick",'addTocart2()')
   })
+</script>
+<script>
+        
+  if(localStorage.getItem("fullName") == null){
+      getElementById("555").textContent=""
+  }
+  else {document.getElementById("555").textContent =" " + localStorage.getItem("fullName");}
+  
 </script>
 
 </body>

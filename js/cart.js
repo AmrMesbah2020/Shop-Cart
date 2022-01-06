@@ -19,7 +19,7 @@ for(var i=0;i<cartItems.length;i++){
 		  </td>
 	<td class="border-0 align-middle"><button type="button" class="btn btn-danger adds">Remove</button></td>`
 	cartRow.innerHTML=cartRowContent
-  console.log(cartItems)
+//   console.log(cartItems)
   cartList.append(cartRow)
   cartRow.getElementsByClassName('adds')[0].addEventListener('click',removeCartItem)
   cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('chang',quantityChanged)
@@ -69,9 +69,12 @@ function removeCartItem(event){
 		var q= buttonClicked.parentElement.previousElementSibling.children[0].value
 		var oldTotal=$('.cart-total-price')[0].textContent
 		var newTotal=parseFloat(oldTotal.replace('$',''))-x*q;
-		console.log(newTotal)
+		// console.log(newTotal)
 		$('.cart-total-price')[0].textContent=newTotal.toString();
 		buttonClicked.parentElement.parentElement.remove()
+		itemCounter--;
+		sessionStorage.setItem("cartCount",itemCounter)
+		document.querySelector('.cart span').textContent = itemCounter
         
 
 }
@@ -90,12 +93,24 @@ function updateCartTotal(){
 
 	}
 document.getElementsByClassName('cart-total-price')[0].innerText='$'+total
+return total;
+
 }
 
 
 // remove favlist from local storage
-localStorage.removeItem('cart_products');
+/*localStorage.removeItem('cart_products');*/
 
-document.querySelector('.cart span').textContent=localStorage.getItem("cartCount")
+var itemCounter=$("table tr").length-1;
+document.querySelector('.cart span').textContent=itemCounter;
+sessionStorage.setItem("cartCount",itemCounter);
 
-localStorage.removeItem("cartCount")
+
+
+document.getElementsByClassName("btn  mb-4 btn-lg pl-5 pr-5 checkout_btn")[0].addEventListener("click",function(){
+	alert(localStorage.getItem("fullName") + " Thank you for doing business with us ❤")
+	
+	localStorage.clear()
+	sessionStorage.clear()
+	alert("Thank you for doing business with us ❤")
+})
